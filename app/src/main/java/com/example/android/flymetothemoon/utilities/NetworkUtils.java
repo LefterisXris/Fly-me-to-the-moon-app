@@ -175,6 +175,7 @@ public final class NetworkUtils {
         }
 
         Log.v(TAG, "Built URI for AUTOCOMPLETE " + url);
+        Log.v(TAG, "API key = " + apikey);
         return  url;
     }
 

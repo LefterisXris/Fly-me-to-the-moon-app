@@ -3,7 +3,6 @@
 ##Application Logo:
 ![Flyme logo](app/src/main/res/drawable/flyme_logo.png) <br/><br/>
 
-
 Fly me to the moon is an Android App which made for academic purposes.
 
 With this app, you can search for flights all over the world. 

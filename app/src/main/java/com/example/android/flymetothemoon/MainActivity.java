@@ -27,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
 //                finish(); this is also
 //            }
 //        },TIME_OUT);
-        Toast toast = Toast.makeText(this, "Μη διαθέσιμο..." ,Toast.LENGTH_LONG);
-        toast.show();
+      //  Toast toast = Toast.makeText(this, "Μη διαθέσιμο..." ,Toast.LENGTH_LONG);
+        //toast.show();
         //Just a change
         //another one?
     }

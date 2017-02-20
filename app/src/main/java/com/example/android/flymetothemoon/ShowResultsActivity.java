@@ -284,6 +284,12 @@ public class ShowResultsActivity extends AppCompatActivity {
                 getString(R.string.pref_max_price_key),
                 getString(R.string.pref_max_price_default_value));
 
+        boolean hasChanged = false;
+
+        if (!currency.equals(mCurrency) || !maxResults.equals(mMaxResults) || !max_price.equals(mMax_price)) {
+            hasChanged = true;
+        }
+
         currency = mCurrency;
         maxResults = mMaxResults;
         max_price = mMax_price;
@@ -296,7 +302,9 @@ public class ShowResultsActivity extends AppCompatActivity {
         msg += "Max Price = "+ max_price + "\n";
         Log.v(TAG, msg);
 
-        refreshResults();
+        if (hasChanged) {
+            refreshResults();
+        }
     }
 
     @Override
