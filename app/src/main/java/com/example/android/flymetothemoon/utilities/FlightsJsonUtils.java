@@ -182,7 +182,7 @@ public final class FlightsJsonUtils {
         response = new JsonResponseFlights(flightResults, currency, numberOfFlights, numberOfItineraries, numberOfInboundFlights, numberOfOutboundFlights);
 
 
-        //Με αυτόν τον τρόπο παίρνω τα αποτελέσματα.
+        //Με αυτόν τον τρόπο παίρνω τα αποτελέσματα. Dokimi test1
         response.getResults().get(0).getItineraries().get(0).getInbounds().get(0).getAirline();
 
         String msg = "\n\n\n\nΠληροφορίες για τις πτήσεις!\n\n Βρέθηκαν " + numberOfFlights + " πτήσεις!\n\n";
