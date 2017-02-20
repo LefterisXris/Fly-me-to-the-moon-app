@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name" translatable="false">Fly me to the moon</string>
+    <string name="banner">Plan your next trip now!!</string>
+    <string name="origin">From:</string>
+    <string name="destination">Destination:</string>
+    <string name="select_airport">Select Airport</string>
+    <string name="departure_date">Departure Date</string>
+    <string name="arrival_date">Arrival Date</string>
+    <string name="direct_flights_only">Direct flights</string>
+    <string name="search_button">Search</string>
+    <string name="one_way_trip">One way</string>
+    <string name="flight_search">Flight Search</string>
+
+
+    <string name="results_title">Results</string>
+
+
+    <string name="results_not_found_error_msg">No Results found!</string>
+    <string name="try_another_error_msg">Try another search...</string>
+
+
+    <!-- PREFERENCES -->
+    <string name="title_activity_settings">Settings</string>
+
+    <string name="pref_currency_key">currency</string>
+    <string name="pref_currency_title">Currency</string>
+    <string name="pref_currency_default_value">EUR</string>
+
+    <string name="pref_number_of_results_key">results</string>
+    <string name="pref_number_of_results_title">Results</string>
+    <string name="pref_number_of_results_default_value">10</string>
+
+
+    <string name="pref_max_price_key">max_price</string>
+    <string name="pref_max_price_title">Max price</string>
+    <string name="pref_max_price_default_value">400</string>
+
+
+   <string-array name="pref_currency_entries">
+       <item>Euro (€)</item>
+       <item>Dollar ($)</item>
+   </string-array>
+
+    <string-array name="pref_currency_values">
+        <item>EUR</item>
+        <item>USD</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_marginTop="15dp"
+    android:paddingBottom="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+
+    <!-- logo company -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#E3F2FD">
+
+
+        <TextView
+            android:id="@+id/company_name_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Airline"
+            android:textSize="25sp"
+            android:gravity="center"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:paddingBottom="5dp"
+        android:background="#E3F2FD">
+
+        <!-- result information -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="7"
+            android:layout_height="136dp"
+            android:orientation="vertical">
+
+            <!-- outbound -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:orientation="horizontal"
+                android:minHeight="68dp">
+
+                <!-- 1 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="68dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/outbound_departure_time_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="17:30"
+                        android:gravity="bottom"
+                        android:textAlignment="center"
+                        android:background="#E3F2FD" />
+
+                    <TextView
+                        android:id="@+id/outbound_departure_airport_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:textAlignment="center"
+                        android:text="Θεσσαλονί"
+                        android:background="#E3F2FD" />
+
+
+                </LinearLayout>
+
+                <!-- 2 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:minHeight="68dp"
+                    android:orientation="vertical"
+                    android:background="#E3F2FD">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:background="#E3F2FD">
+
+                        <TextView
+                            android:id="@+id/outbound_duration_text_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="4"
+                            android:text="3 ωρ:30 λ"
+                            android:gravity="bottom"
+                            android:textAlignment="center"
+                            android:background="#E3F2FD" />
+
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="10"
+                            android:src="@drawable/arrowright"
+                            android:scaleType="centerInside"
+                            android:background="#E3F2FD" />
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+                <!-- 3 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="68dp"
+                    android:orientation="vertical"
+                    android:background="#E3F2FD">
+
+                    <TextView
+                        android:id="@+id/outbound_arrival_time_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="21:00"
+                        android:gravity="bottom"
+                        android:textAlignment="center"
+                        android:background="#E3F2FD" />
+
+
+                    <TextView
+                        android:id="@+id/outbound_arrival_airport_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="Στουτκάρδη"
+                        android:gravity="top"
+                        android:textAlignment="center"
+                        android:background="#E3F2FD" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!-- inbound -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:orientation="horizontal"
+                android:minHeight="68dp"
+                android:background="#E3F2FD">
+
+                <!-- 1 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="68dp"
+                    android:orientation="vertical"
+                    android:background="#E3F2FD">
+
+                    <TextView
+                        android:id="@+id/inbound_departure_time_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="13:10"
+                        android:gravity="bottom"
+                        android:textAlignment="center"
+                        android:background="#E3F2FD" />
+
+                    <TextView
+                        android:id="@+id/inbound_departure_airport_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:textAlignment="center"
+                        android:text="Στουτκάρδη"
+                        android:background="#E3F2FD" />
+
+
+                </LinearLayout>
+
+                <!-- 2 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:minHeight="68dp"
+                    android:orientation="vertical"
+                    android:background="#E3F2FD">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:background="#E3F2FD">
+
+                        <TextView
+                            android:id="@+id/inbound_duration_text_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="4"
+                            android:text="3 ωρ:10 λ"
+                            android:gravity="bottom"
+                            android:textAlignment="center"
+                            android:background="#E3F2FD" />
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="10"
+                            android:layout_gravity="center"
+                            android:src="@drawable/arrowright"
+                            android:scaleType="centerInside"
+                            android:background="#E3F2FD" />
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+                <!-- 3 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="68dp"
+                    android:orientation="vertical"
+                    android:background="#E3F2FD">
+
+                    <TextView
+                        android:id="@+id/inbound_arrival_time_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="16:20"
+                        android:gravity="bottom"
+                        android:textAlignment="center"
+                        android:background="#E3F2FD" />
+
+
+                    <TextView
+                        android:id="@+id/inbound_arrival_airport_text_vie"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="Θεσσαλονί"
+                        android:gravity="top"
+                        android:textAlignment="center"
+                        android:background="#E3F2FD" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Total price -->
+        <TextView
+            android:id="@+id/total_price_text_view"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="136dp"
+            android:background="#E3F2FD"
+            android:text="170 €"
+            android:textSize="20sp"
+            android:gravity="center">
+
+        </TextView>
+
+    </LinearLayout>
+
+
+</LinearLayout>

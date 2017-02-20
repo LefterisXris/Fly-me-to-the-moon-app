@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListPreference
+        android:defaultValue="180"
+        android:entries="@array/curr"
+        android:entryValues="@array/currency_val"
+        android:key="currency_key"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="Change Currency" />
+
+    <EditTextPreference
+        android:capitalize="words"
+        android:defaultValue="400"
+        android:inputType="number"
+        android:key="max_results_key"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="Max results" />
+
+    <EditTextPreference
+        android:capitalize="words"
+        android:defaultValue="400"
+        android:inputType="number"
+        android:key="max_price_key"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="Max price" />
+
+
+    <ListPreference
+        android:defaultValue="180"
+        android:entries="@array/Language"
+        android:entryValues="@array/languageVal"
+        android:key="language_key"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="Language" />
+
+
+</PreferenceScreen>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <!-- Option για το νόμισμα. -->
+    <ListPreference
+        android:key="@string/pref_currency_key"
+        android:defaultValue="@string/pref_currency_default_value"
+        android:title="@string/pref_currency_title"
+        android:entries="@array/pref_currency_entries"
+        android:entryValues="@array/pref_currency_values">
+
+    </ListPreference>
+
+    <!-- Option για τον αριθμό επιθυμητών αποτελεσμάτων. -->
+    <EditTextPreference
+        android:title="@string/pref_number_of_results_title"
+        android:key="@string/pref_number_of_results_key"
+        android:defaultValue="@string/pref_number_of_results_default_value"
+        android:inputType="number"
+        android:singleLine="true">
+
+    </EditTextPreference>
+
+    <!-- Option για την μέγιστη τιμή των πτήσεων. -->
+    <EditTextPreference
+        android:title="@string/pref_max_price_title"
+        android:key="@string/pref_max_price_key"
+        android:defaultValue="@string/pref_max_price_default_value"
+        android:inputType="number"
+        android:singleLine="true">
+
+    </EditTextPreference>
+
+
+
+</PreferenceScreen>

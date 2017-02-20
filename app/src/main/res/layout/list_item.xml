@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_marginTop="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/aa_text_view"
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        android:text="aaa"
+        android:textSize="65sp"
+        android:gravity="center_horizontal"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:minHeight="88dp"
+        >
+
+        <!-- 1 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="88dp"
+            android:orientation="vertical"
+            android:background="@color/colorAccent">
+
+            <TextView
+                android:id="@+id/company_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="Εταιρία"/>
+
+            <TextView
+                android:id="@+id/dep_time_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="Ώρα αναχώρησης"/>
+
+
+        </LinearLayout>
+
+        <!-- 2 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="88dp"
+            android:orientation="vertical"
+            android:background="@color/colorPrimary">
+
+            <TextView
+                android:id="@+id/flight_code_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="Κωδικός πτήσης"/>
+
+            <TextView
+                android:id="@+id/arr_time_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="Ώρα άφιξης"/>
+
+        </LinearLayout>
+
+        <!-- 3 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="88dp"
+            android:orientation="vertical"
+            android:background="@color/colorPrimaryDark">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="open"
+                android:onClick=""/>
+            <TextView
+                android:id="@+id/price_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="Τιμή:"
+                android:gravity="bottom"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

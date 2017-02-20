@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_search"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    tools:context="com.example.android.flymetothemoon.SearchActivity">
+
+    <!-- Banner -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:src="@drawable/travel2"
+        android:scaleType="centerCrop"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:focusableInTouchMode="true"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+        <!-- Origin -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="wrap_content"
+                android:text="@string/origin"/>
+
+
+            <AutoCompleteTextView
+                android:id="@+id/autocompleteOriginAirport"
+                android:layout_width="0dp"
+                android:layout_weight="12"
+                android:layout_height="wrap_content"
+                android:hint="@string/select_airport"
+                android:maxLines="1"
+                />
+
+
+        </LinearLayout>
+
+        <!-- Destination -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="wrap_content"
+                android:text="@string/destination"/>
+
+            <AutoCompleteTextView
+                android:id="@+id/autocompleteDestinationAirport"
+                android:layout_width="0dp"
+                android:layout_weight="12"
+                android:layout_height="wrap_content"
+                android:hint="@string/select_airport"
+                android:maxLines="1"/>
+
+
+        </LinearLayout>
+
+        <!-- Datepickers -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+
+            <!-- outbound Datepicker -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginBottom="20dp">
+
+                <!-- outbound Datepicker -->
+                <TextView
+                    android:id="@+id/departure_date_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/departure_date"
+                    android:gravity="center"
+                    android:layout_marginBottom="10dp"/>
+
+                <!-- outbound Datepicker -->
+                <Button
+                    android:id="@+id/button_departure_date"
+                    android:layout_width="135dp"
+                    android:layout_height="70dp"
+                    android:text="@string/departure_date"
+                    android:layout_gravity="center_horizontal"
+                    android:onClick="openDatepicker"/>
+
+
+            </LinearLayout>
+
+
+            <!-- inbound Datepicker -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/arrival_date_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/arrival_date"
+                    android:gravity="center"
+                    android:layout_marginBottom="10dp"/>
+
+                <Button
+                    android:id="@+id/button_arrival_date"
+                    android:layout_width="135dp"
+                    android:layout_height="70dp"
+                    android:text="@string/arrival_date"
+                    android:layout_gravity="center_horizontal" />
+
+
+                <!--     <CalendarView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:firstDayOfWeek="2"
+                         android:maxDate="02/25/2017"
+                         android:minDate="01/01/2017"></CalendarView>
+ -->
+
+             </LinearLayout>
+
+
+         </LinearLayout>
+
+         <!-- Checkboxes -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <!-- checkbox for only outbound -->
+            <CheckBox
+                android:id="@+id/one_way_checkbox"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/one_way_trip" />
+
+            <!-- checkbox for direct flights -->
+            <CheckBox
+                android:id="@+id/direct_flight_checkbox"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/direct_flights_only" />
+
+        </LinearLayout>
+
+
+        <!-- LinerLayout horizontal n of persons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- minus button -->
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="-"
+                android:onClick="decreasePerson"/>
+
+            <!-- textview display persons -->
+            <TextView
+                android:id="@+id/persons_to_fly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"/>
+
+            <!-- add button -->
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="+"
+                android:onClick="increasePerson"/>
+
+        </LinearLayout>
+
+
+        <!-- Search Button -->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/search_button"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="right"
+            android:onClick="showResults"
+            />
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

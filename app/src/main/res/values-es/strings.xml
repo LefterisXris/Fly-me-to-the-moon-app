@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Fly me to the moon</string>
+    <string name="banner">Plan your next trip now!!</string>
+    <string name="departure_date">Fecha de salida:</string>
+    <string name="arrival_date">Fecha de vuelta:</string>
+    <string name="direct_flights_only">Vuelos directos</string>
+    <string name="one_way_trip">Solo ida</string>
+    <string name="origin">Desde:</string>
+    <string name="search_button">Busqueda</string>
+    <string name="select_airport">Elegir Aeropuerto</string>
+    <string name="destination">Destino</string>
+    <string name="flight_search">Busqueda vuelo</string>
+</resources>

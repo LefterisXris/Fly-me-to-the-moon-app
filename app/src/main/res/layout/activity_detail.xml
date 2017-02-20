@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="com.example.android.flymetothemoon.DetailActivity">
+
+    <!-- airline logo -->
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       android:layout_weight="4">
+
+       <ImageView
+           android:id="@+id/det_airline_logo_image_view"
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:layout_height="match_parent"
+           android:src="@drawable/ryanair_logo"/>
+
+   </LinearLayout>
+
+    <!-- table of details -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="6">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <!-- Col 1 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="Λεπτομέρειες πτήσης"
+                    android:textStyle="bold"
+                    android:textAlignment="center"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="Ώρα αναχώρησης:"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="Ώρα άφιξης:"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="Αριθμός πτήσης:"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="Διάρκεια πτήσης:"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/SplitLine_hor1"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:background="@android:color/darker_gray" />
+
+            <!-- Col 2 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:text="Αναχώρηση"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/det_go_departure_time_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:textAlignment="center"
+                    android:layout_weight="1"
+                    android:text="values"/>
+
+                <TextView
+                    android:id="@+id/det_go_arrival_time_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:textAlignment="center"
+                    android:layout_weight="1"
+                    android:text="values"/>
+
+                <TextView
+                    android:id="@+id/det_go_flight_number_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:text="values"/>
+
+                <TextView
+                    android:id="@+id/det_go_duration_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+
+                    android:textAlignment="center"
+                    android:layout_weight="1"
+                    android:text="values"/>
+
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/SplitLine_hor2"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:background="@android:color/darker_gray" />
+
+            <!-- Col 3 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:text="Επιστροφή"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/det_return_departure_time_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:textAlignment="center"
+                    android:layout_weight="1"
+                    android:text="values"/>
+
+                <TextView
+                    android:id="@+id/det_return_arrival_time_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:textAlignment="center"
+                    android:layout_weight="1"
+                    android:text="values"/>
+
+                <TextView
+                    android:id="@+id/det_return_flight_number_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:text="values"/>
+
+                <TextView
+                    android:id="@+id/det_return_duration_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:textAlignment="center"
+                    android:layout_weight="1"
+                    android:text="values"/>
+
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/SplitLine_horε"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@android:color/darker_gray" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Price -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="Τιμή:"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/det_price_textview"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:text="150 E"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+
+    </LinearLayout>
+</LinearLayout>

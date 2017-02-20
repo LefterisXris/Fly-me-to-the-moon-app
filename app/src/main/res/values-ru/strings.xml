@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Fly me to the moon</string>
+    <string name="banner">Plan your next trip now!!</string>
+    <string name="departure_date">Дата отправления:</string>
+    <string name="arrival_date">"Дата возвращения: "</string>
+    <string name="direct_flights_only">Прямые рейсы</string>
+    <string name="one_way_trip">В одну сторону</string>
+    <string name="origin">Откуда:</string>
+    <string name="select_airport">выберите  аэропорт</string>
+    <string name="search_button">поиск</string>
+    <string name="destination">место назначения</string>
+    <string name="flight_search">поиск рейс</string>
+</resources>

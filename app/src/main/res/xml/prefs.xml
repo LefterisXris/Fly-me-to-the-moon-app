@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <PreferenceScreen  xmlns:android="http://schemas.android.com/apk/res/android">
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:key="first_preferencescreen">
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="wifi enabled"
+            android:title="WiFi" />
+
+        <ListPreference
+            android:key="yolo"
+            android:title="Language"
+            android:dialogTitle="Select language"
+            android:entries="@array/Language"
+            android:entryValues="@array/languageVal"
+            android:defaultValue="Nonting to show"/>
+
+    <ListPreference
+        android:title="Currency"
+        android:dialogTitle="Select currency"
+        android:entries="@array/curr"
+        android:entryValues="@array/currency_val"
+       >
+
+    </ListPreference>
+
+
+
+</PreferenceScreen>

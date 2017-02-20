@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+
+
+    <string-array name="currency_val">
+        <item> "EUR" </item>
+        <item> "USD" </item>
+    </string-array>
+
+    <string-array name="curr">
+        <item> "Euro €" </item>
+        <item> "Dollar $"</item>
+    </string-array>
+
+
+    <string-array name="Language">
+        <item>English (US)</item>
+        <item>English (UK)</item>
+        <item>French (France)</item>
+        <item>Spanish (Spain)</item>
+        <item>Italian</item>
+    </string-array>
+
+    <string-array name="languageVal">
+        <item>"en-US"</item>
+        <item>"en-GB"</item>
+        <item>"fr-FR"</item>
+        <item>"es-ES"</item>
+        <item>"it-IT"</item>
+    </string-array>
+
+    <string-array name="available_airports">
+        <item> Thessaloníki - Thessaloniki Airport [SKG] </item>
+        <item> Athina ATH </item>
+        <item> Stuttkart STR </item>
+        <item> Barcelona BCN </item>
+        <item> London [LON] </item>
+        <item> London Heathrow Airport [LHR] </item>
+        <item> London - Stansted Airport [STN] </item>
+        <item> Stuttgart Airport [STR] </item>
+        <item> Barcelona–El Prat Airport [BCN] </item>
+        <item> Athens Eleftherios Venizelos International Airport [ATH] </item>
+        <item> Berlin Brandenburg Airport [BER] </item>
+        <item> Manchester Airport [MAN] </item>
+        <item> Paris [PAR] </item>
+        <item> Rome [ROM] </item>
+        <item> Roma [RMA] </item>
+        <item> Rome - Roma Ciampino Airport [CIA] </item>
+
+    </string-array>
+</resources>
