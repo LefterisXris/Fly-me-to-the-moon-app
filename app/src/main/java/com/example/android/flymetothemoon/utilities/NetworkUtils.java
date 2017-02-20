@@ -21,7 +21,7 @@ import static com.example.android.flymetothemoon.BuildConfig.IATA_API_KEY;
 
 /**
  * Created by tsita on 13/1/2017.
- * These utilities will be used to communicate with the weather servers.
+ * These utilities will be used to communicate with the servers.
  */
 
 public final class NetworkUtils {
