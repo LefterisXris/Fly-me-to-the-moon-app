@@ -59,8 +59,6 @@ public final class NetworkUtils {
     private static final String airlines_api_key = IATA_API_KEY.toString();
 
 
-    //TODO(1) Φτιάξε και τα απαιτούμενα PARAMS
-
     final static String FLIGHTS_BASE_URL = "https://api.sandbox.amadeus.com/v1.2/flights/low-fare-search";
     final static String API_KEY_PARAM = "apikey";
     final static String ORIGIN_PARAM = "origin";
@@ -80,10 +78,6 @@ public final class NetworkUtils {
     final static String AIRLINES_BASE_URL = "https://iatacodes.org/api/v6/airlines";
     final static String AIRLINES_API_KEY_PARAM = "api_key";
     final static String AIRLINES_CODE_PARAM = "code";
-
-    //TODO(1) βρες ποια δεδομένα πρέπει να δίνεις ώστε να είναι σωστό το url από το API.
-
-
 
 
     /* για να φτιάξω το  uri με βάση αυτά που θέλει ο χρήστης θα πρέπει αν αλλάξω την υπογραφή της. θα παίρνει ως είσοδο αυτά που θέλω. */
@@ -106,9 +100,7 @@ public final class NetworkUtils {
                 .appendQueryParameter(N_RESULTS_PARAM, number_of_results)
                 .appendQueryParameter(CURRENCY_PARAM, currency)
                 .build();
-        /* //TODO βάλε στην υπογραφή
-
-
+        /*
     "https://api.sandbox.amadeus.com/v1.2/flights/low-fare-search?
     apikey=IATA_API_KEY.toString()
     &origin=SKG

@@ -175,10 +175,7 @@ public class ShowResultsActivity extends AppCompatActivity {
 
 
     public void showJsonDataView(){
-   /*     mSearchResultsTextView.setVisibility(View.VISIBLE);
-        mErrorMessageTextView.setVisibility(View.INVISIBLE);
-*/
-//// TODO: 5/2/2017 remove it
+
     }
 
     public void refreshResults(){
@@ -339,10 +336,6 @@ public class ShowResultsActivity extends AppCompatActivity {
         error_msg.setVisibility(View.VISIBLE);
         error_msg2.setVisibility(View.VISIBLE);
 
-        /*Intent intent = new Intent(this, SettingsActivity.class);
-                Toast toast = Toast.makeText(this, "Μη διαθέσιμο..." ,Toast.LENGTH_LONG);
-                toast.show();
-        startActivity(intent);*/
     }
 
     public String getTime(String date){
@@ -429,7 +422,7 @@ public class ShowResultsActivity extends AppCompatActivity {
             response = null;
 
             /* URL για εύρεση πτήσεων */
-            if (!isCancelled()) {
+            if (!isCancelled()) { // OriginAirport.get(0).getValue() , ReturnAirport.get(0).getValue()
                 URL flightsRequestUrl = NetworkUtils.buildUrl(OriginAirport.get(0).getValue(), ReturnAirport.get(0).getValue(), params[0].getmDeparrture_date(),
                         params[0].getmReturn_date(), params[0].ismNonstop(), params[0].getmMax_price(), params[0].getmMaxResults(), params[0].getmCurrency());
 
@@ -466,8 +459,8 @@ public class ShowResultsActivity extends AppCompatActivity {
                 }
 
 
-            /* URL για αντιστοίχηση αεριοπορικών εταιρίών */
-                for (int j = 0; j < response.getNumberOfFlights(); j++) {
+            /* URL για αντιστοίχηση αεριοπορικών εταιρίών */ //UPDATE: the IATA api is not a trusted server for android. CA error.
+              /*  for (int j = 0; j < response.getNumberOfFlights(); j++) {
                     URL airlinesRequestUrl = NetworkUtils.buildUrlForAirlines(response.getResults().get(j).getItineraries()
                             .get(0).getOutbound().get(0).getAirline());
 
@@ -492,10 +485,13 @@ public class ShowResultsActivity extends AppCompatActivity {
                         e.printStackTrace();
                         cancel(true);
                     }
-                }
+                }*/
             }
 
+            airlinesTranslate();
+
             for (int i=0;i<response.getNumberOfFlights();i++) {
+
                 String price = response.getResults().get(i).getPrice();
 
                 if (currency.equals("EUR")) {
@@ -506,6 +502,34 @@ public class ShowResultsActivity extends AppCompatActivity {
                 response.getResults().get(i).setPrice(price);
             }
             return response;
+        }
+
+        /**
+         * Method that "translates" the airlines IATA codes into airlines names.
+         */
+        private void airlinesTranslate(){
+            for (int i=0;i<response.getNumberOfFlights();i++) {
+                switch (response.getResults().get(i).getItineraries().get(0).getOutbound().get(0).getAirline()){
+                    case "EL": response.getResults().get(i).getItineraries().get(0).getOutbound().get(0).setAirline_full_name("Air Nippon");
+                        break;
+                    case "A3": response.getResults().get(i).getItineraries().get(0).getOutbound().get(0).setAirline_full_name("Aegean Airlines");
+                        break;
+                    case "FR": response.getResults().get(i).getItineraries().get(0).getOutbound().get(0).setAirline_full_name("Ryanair");
+                        break;
+                    case "TK": response.getResults().get(i).getItineraries().get(0).getOutbound().get(0).setAirline_full_name("Turkish Airlines");
+                        break;
+                    case "U2": response.getResults().get(i).getItineraries().get(0).getOutbound().get(0).setAirline_full_name("Easy Jet");
+                        break;
+                    case "UA": response.getResults().get(i).getItineraries().get(0).getOutbound().get(0).setAirline_full_name("United Airlines");
+                        break;
+                    case "OA": response.getResults().get(i).getItineraries().get(0).getOutbound().get(0).setAirline_full_name("Olympic Air");
+                        break;
+                    case "LH": response.getResults().get(i).getItineraries().get(0).getOutbound().get(0).setAirline_full_name("Lufthansa");
+                        break;
+                    default: response.getResults().get(i).getItineraries().get(0).getOutbound().get(0).setAirline_full_name("Unknown Airline");
+                        break;
+                }
+            }
         }
 
         @Override
@@ -530,44 +554,7 @@ public class ShowResultsActivity extends AppCompatActivity {
             //response.getResults().get(0).getItineraries().get(0).getInbounds().get(0).getAirline();
 
             if (response.getResults().size() > 0 && response != null){
-//                String msg = "";
-//                msg += "Βρέθηκαν " + response.getResults().size() + " αποτελέσματα!\n" ;
-//                for (int i=0; i<response.getNumberOfFlights(); i++)
-//                {
-//                    for (int j=0; j<response.getNumberOfItineraries(); j++){
-//                        for (int k=0; k<response.getNumberOfOutboundFlights(); k++){
-//                            msg += "Πτήση από " + response.getResults().get(i).getItineraries().get(j).getOutbound().get(k).getOrigin_airport()
-//                                    + " \nγια " + response.getResults().get(i).getItineraries().get(j).getOutbound().get(k).getDestination_airport()
-//                                    + "\nστις " + response.getResults().get(i).getItineraries().get(j).getOutbound().get(k).getDeparts_at()
-//                                    + "\nκαι άφιξη στις " + response.getResults().get(i).getItineraries().get(j).getOutbound().get(k).getArrives_at()
-//                                    + "\n με την εταιρία " + response.getResults().get(i).getItineraries().get(j).getOutbound().get(k).getAirline()
-//                                    + " κωδικός πτήσης " + response.getResults().get(i).getItineraries().get(j).getOutbound().get(k).getFlight_number() + "\n";
-//                        }
-//                        for (int k=0; k<response.getNumberOfInboundFlights(); k++){
-//                            msg += "Επιστροφή από " + response.getResults().get(i).getItineraries().get(j).getInbounds().get(k).getOrigin_airport()
-//                                    + "\nγια " + response.getResults().get(i).getItineraries().get(j).getInbounds().get(k).getDestination_airport()
-//                                    + "\nστις " + response.getResults().get(i).getItineraries().get(j).getInbounds().get(k).getDeparts_at()
-//                                    + "\nκαι άφιξη στις " + response.getResults().get(i).getItineraries().get(j).getInbounds().get(k).getArrives_at()
-//                                    + "\n με την εταιρία " + response.getResults().get(i).getItineraries().get(j).getInbounds().get(k).getAirline()
-//                                    + " κωδικός πτήσης " + response.getResults().get(i).getItineraries().get(j).getInbounds().get(k).getFlight_number() + "\n";
-//                        }
-//
-//
-//                    }
-//
-//                    msg += "Συνολική τιμή: " + response.getResults().get(i).getPrice()
-//                            + " σε νόμισμα " + response.getCurrency() + "\n" ;
-//
-//                }
-//                msg += "Αριθμός itineraries: "  + response.getNumberOfItineraries()
-//                        + "\nΑριθμός πτήσεων out: " + response.getNumberOfOutboundFlights()
-//                        + "\nΑριθμός πτήσεων in: " + response.getNumberOfInboundFlights() + "\n";
 
-         //       mSearchResultsTextView.setText(msg);
-                //TODO Βάλε τα δεδομένα όμορφα στην οθόνη με τον adapter.
-                //TODO Πρόσθεσε μενού επιλογών για γλώσσα, νόμισμα και σκέψου κι άλλα.
-
-                //TODO κάνε καινούργια συνάρτηση ώστε να είναι ξεχωριστά η εμφάνιση των αποτελεσμάτων η οποία θα καλείται από την post execute.
 
                 /* ΜΟΡΦΟΠΟΙΗΣΗ ΩΡΑΣ και ΔΙΑΡΚΕΙΑΣ*/
                 for (int i=0;i<response.getNumberOfFlights();i++){
