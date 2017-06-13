@@ -155,7 +155,6 @@ public class DetailActivity extends AppCompatActivity {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.details_options, menu);
 
-        //TODO βάλε το settings menu στο activity.
         return true;
     }
 

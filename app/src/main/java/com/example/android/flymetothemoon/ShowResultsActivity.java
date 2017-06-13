@@ -98,7 +98,6 @@ public class ShowResultsActivity extends AppCompatActivity {
             return_date = extras.getString("return_date");
             is_one_way = extras.getString("is_one_way");
             is_non_stop = extras.getString("is_non_stop");
-            max_price = extras.getString("max_price");
             persons = extras.getString("persons");
 
 
@@ -158,7 +157,7 @@ public class ShowResultsActivity extends AppCompatActivity {
 */
 
        // ArrayList<FlightQuery> flightQueries = new ArrayList<FlightQuery>();
-        flightQuery = new FlightQuery(origin, destination, departure_date, return_date, is_non_stop, max_price, maxResults ,currency);
+        flightQuery = new FlightQuery(origin, destination, departure_date, return_date, is_non_stop, max_price, maxResults ,currency, is_one_way, persons);
 
         //flightQueries.add(new FlightQuery(origin, destination, departure_date, return_date, is_non_stop, max_price, maxResults ,currency));
         //flightQueries.add(new FlightQuery("SKG", "STR", "2017-01-25", "2017-01-30", "true", "400", "EUR"));
@@ -173,14 +172,9 @@ public class ShowResultsActivity extends AppCompatActivity {
     }
 
 
-
-    public void showJsonDataView(){
-
-    }
-
     public void refreshResults(){
 
-        flightQuery = new FlightQuery(origin, destination, departure_date, return_date, is_non_stop, max_price, maxResults ,currency);
+        flightQuery = new FlightQuery(origin, destination, departure_date, return_date, is_non_stop, max_price, maxResults ,currency, is_one_way, persons);
 
         new FetchFlightsTask().execute(flightQuery);
     }
@@ -291,13 +285,6 @@ public class ShowResultsActivity extends AppCompatActivity {
         maxResults = mMaxResults;
         max_price = mMax_price;
 
-
-        //TODO remove it
-        String msg = "";
-        msg += "Currency = " + currency + "\n";
-        msg += "Max yolo Results = " + maxResults + "\n";
-        msg += "Max Price = "+ max_price + "\n";
-        Log.v(TAG, msg);
 
         if (hasChanged) {
             refreshResults();
@@ -422,9 +409,13 @@ public class ShowResultsActivity extends AppCompatActivity {
             response = null;
 
             /* URL για εύρεση πτήσεων */
+            boolean isOneWay = false;
+            if (Boolean.parseBoolean(is_one_way))
+                isOneWay = true;
+
             if (!isCancelled()) { // OriginAirport.get(0).getValue() , ReturnAirport.get(0).getValue()
                 URL flightsRequestUrl = NetworkUtils.buildUrl(OriginAirport.get(0).getValue(), ReturnAirport.get(0).getValue(), params[0].getmDeparrture_date(),
-                        params[0].getmReturn_date(), params[0].ismNonstop(), params[0].getmMax_price(), params[0].getmMaxResults(), params[0].getmCurrency());
+                        params[0].getmReturn_date(), params[0].ismNonstop(), params[0].getmMax_price(), params[0].getmMaxResults(), params[0].getmCurrency(), params[0].getPersons(), isOneWay);
 
                 String jsonFlightResponse = null;
 
@@ -546,13 +537,6 @@ public class ShowResultsActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(JsonResponseFlights response) {
 
-//            Log.v("ShowResultsActivity", "flights = " + flights[0]);
-//            Log.v("ShowResultsActivity", "flights = " + flights[1]);
-
-          //  mIndicatorProgressBar.setVisibility(View.INVISIBLE);
-
-            //response.getResults().get(0).getItineraries().get(0).getInbounds().get(0).getAirline();
-
             if (response.getResults().size() > 0 && response != null){
 
 
@@ -590,8 +574,6 @@ public class ShowResultsActivity extends AppCompatActivity {
                 /* ΜΟΡΦΟΠΟΙΗΣΗ ΤΙΜΗΣ */ //TODO
 
 
-
-
                 resultAdapter = new ResultAdapter(ShowResultsActivity.this, response.getResults());
                 listView = (ListView) findViewById(R.id.activity_show_results);
 
@@ -605,48 +587,12 @@ public class ShowResultsActivity extends AppCompatActivity {
 
 
                 setOnclickItem();
-                showJsonDataView();
             }
             else{
                 showErrorMessage();
             }
 
 
-
-//            if (flights.length > 0) {
-//                mSearchResultsTextView.setText(flights[0]);
-//                mHeadingTextView.setText("Επιτυχής ανάκτηση δεδομένων!");
-//                showJsonDataView();
-//                try {
-//                    FlightsJsonUtils.getFlightsStringsFromJson(ShowResultsActivity.this, flights[0]);
-//                } catch (JSONException e) {
-//                    e.printStackTrace();
-//                }
-//
-//                try {
-//                    FlightsJsonUtils.autocompletAirport(ShowResultsActivity.this, flights[1]);
-//                } catch (JSONException e) {
-//                    e.printStackTrace();
-//                }
-//
-//
-//                try {
-//                    FlightsJsonUtils.airlinesJson(ShowResultsActivity.this, flights[2]);
-//                } catch (JSONException e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//            else {
-//                showErrorMessage();
-//            }
-
-
-
-//            if (flights != null){
-//                for (String flightString : flights){
-//                    mResultsTextView.append((flightString) + "\n\n\n");
-//                }
-//            }
 
         }
 

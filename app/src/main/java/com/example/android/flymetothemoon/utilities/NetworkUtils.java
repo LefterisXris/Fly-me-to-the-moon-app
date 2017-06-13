@@ -69,6 +69,8 @@ public final class NetworkUtils {
     final static String MAX_PRICE_PARAM = "max_price";
     final static String N_RESULTS_PARAM = "number_of_results";
     final static String CURRENCY_PARAM = "currency";
+    final static String PERSONS_PARAM = "adults";
+
 
     //Για το autocomplete
     final static String AUTOCOMPLETE_BASE_URL = "https://api.sandbox.amadeus.com/v1.2/airports/autocomplete";
@@ -88,18 +90,38 @@ public final class NetworkUtils {
                                String nonstop,
                                String max_price,
                                String number_of_results,
-                               String currency){
-        Uri builtUri = Uri.parse(FLIGHTS_BASE_URL).buildUpon()
-                .appendQueryParameter(API_KEY_PARAM, apikey)
-                .appendQueryParameter(ORIGIN_PARAM, origin)
-                .appendQueryParameter(DESTINATION_PARAM, destination)
-                .appendQueryParameter(DEPARTURE_DATE_PARAM, departure_date)
-                .appendQueryParameter(RETURN_DATE_PARAM, return_date)
-                .appendQueryParameter(NONSTOP_PARAM, nonstop)
-                .appendQueryParameter(MAX_PRICE_PARAM, max_price)
-                .appendQueryParameter(N_RESULTS_PARAM, number_of_results)
-                .appendQueryParameter(CURRENCY_PARAM, currency)
-                .build();
+                               String currency,
+                               String persons,
+                               boolean isOneWay){
+        Uri builtUri;
+
+        if (isOneWay) {
+            builtUri = Uri.parse(FLIGHTS_BASE_URL).buildUpon()
+                    .appendQueryParameter(API_KEY_PARAM, apikey)
+                    .appendQueryParameter(ORIGIN_PARAM, origin)
+                    .appendQueryParameter(DESTINATION_PARAM, destination)
+                    .appendQueryParameter(DEPARTURE_DATE_PARAM, departure_date)
+                    .appendQueryParameter(NONSTOP_PARAM, nonstop)
+                    .appendQueryParameter(MAX_PRICE_PARAM, max_price)
+                    .appendQueryParameter(N_RESULTS_PARAM, number_of_results)
+                    .appendQueryParameter(PERSONS_PARAM, persons)
+                    .appendQueryParameter(CURRENCY_PARAM, currency)
+                    .build();
+        }
+        else {
+            builtUri = Uri.parse(FLIGHTS_BASE_URL).buildUpon()
+                    .appendQueryParameter(API_KEY_PARAM, apikey)
+                    .appendQueryParameter(ORIGIN_PARAM, origin)
+                    .appendQueryParameter(DESTINATION_PARAM, destination)
+                    .appendQueryParameter(DEPARTURE_DATE_PARAM, departure_date)
+                    .appendQueryParameter(RETURN_DATE_PARAM, return_date)
+                    .appendQueryParameter(NONSTOP_PARAM, nonstop)
+                    .appendQueryParameter(MAX_PRICE_PARAM, max_price)
+                    .appendQueryParameter(N_RESULTS_PARAM, number_of_results)
+                    .appendQueryParameter(PERSONS_PARAM, persons)
+                    .appendQueryParameter(CURRENCY_PARAM, currency)
+                    .build();
+        }
         /*
     "https://api.sandbox.amadeus.com/v1.2/flights/low-fare-search?
     apikey=IATA_API_KEY.toString()

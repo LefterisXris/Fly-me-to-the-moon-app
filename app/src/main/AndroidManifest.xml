@@ -21,9 +21,6 @@
             android:name=".SearchActivity"
             android:label="@string/flight_search" />
         <activity
-            android:name=".SearchResultsActivity"
-            android:label="@string/results_title" />
-        <activity
             android:name=".ShowResultsActivity"
             android:parentActivityName=".SearchActivity">
             <meta-data

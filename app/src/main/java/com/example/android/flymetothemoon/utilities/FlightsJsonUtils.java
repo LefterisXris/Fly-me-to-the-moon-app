@@ -20,6 +20,7 @@ import static android.R.attr.label;
 import static android.R.attr.name;
 import static android.R.attr.resource;
 import static android.R.attr.value;
+import static android.media.CamcorderProfile.get;
 
 /**
  * Created by tsita on 13/1/2017.
@@ -50,8 +51,6 @@ public final class FlightsJsonUtils {
         final String AM_TOTAL_PRICE = "total_price";
 
 
-
-
         JSONObject flightsJson = new JSONObject(flightsJsonStr);
 
         String currency = flightsJson.getString(AM_CURRENCY);
@@ -65,32 +64,10 @@ public final class FlightsJsonUtils {
 
         numberOfFlights = flightsArray.length();
 
-        /* OUTBOUND */
-        //TODO Οι μεταβλητές αυτές δεν χρησιμοποιούνται πλέον.  Πρέπει να διαγραφούν κάποια στιγμή.
-        String[] outbound_departs_at = new String[flightsArray.length()];
-        String[] outbound_arrives_at = new String[flightsArray.length()];
-        String[] outbound_origin_airport = new String[flightsArray.length()];
-        String[] outbound_destination_airport = new String[flightsArray.length()];
-        String[] outbound_airline = new String[flightsArray.length()];
-        String[] outbound_flight_number = new String[flightsArray.length()];
-
-        /* INBOUND */
-        //TODO Οι μεταβλητές αυτές δεν χρησιμοποιούνται πλέον.  Πρέπει να διαγραφούν κάποια στιγμή.
-        String[] inbound_departs_at = new String[flightsArray.length()];
-        String[] inbound_arrives_at = new String[flightsArray.length()];
-        String[] inbound_origin_airport = new String[flightsArray.length()];
-        String[] inbound_destination_airport = new String[flightsArray.length()];
-        String[] inbound_airline = new String[flightsArray.length()];
-        String[] inbound_flight_number = new String[flightsArray.length()];
-        double[] price = new double[flightsArray.length()];
-
         // Αρχικοποίηση του αντικειμένου response και των ArrayList απο
         // τα οποία αποτελείται.
         JsonResponseFlights response;
         ArrayList<FlightResults> flightResults = new ArrayList<>();
-      //  ArrayList<Itineraries> itineraries = new ArrayList<Itineraries>();
-      //  ArrayList<Flights> outFlights = new ArrayList<Flights>();
-      //  ArrayList<Flights> inFlights = new ArrayList<Flights>();
 
         // Αποκωδικοποίηση JSON
     /* κάθε 0,1,2 κλπ είναι ένα object και το παίρνω με getJSONObject
@@ -99,7 +76,6 @@ public final class FlightsJsonUtils {
             JSONObject result = flightsArray.getJSONObject(i);
 
             JSONObject fareObject = result.getJSONObject(AM_FARE);
-            price[i] = fareObject.getDouble(AM_TOTAL_PRICE);
 
             JSONArray itinerariesN = result.getJSONArray(AM_ITINERARIES);
             ArrayList<Itineraries> itineraries = new ArrayList<Itineraries>();
@@ -116,17 +92,10 @@ public final class FlightsJsonUtils {
 
                 for (int k=0; k<numberOfOutboundFlights; k++){
                     JSONObject fl = outFlightsArr.getJSONObject(k);
-                    outbound_departs_at[i] = fl.getString(AM_DEPARTS_AT);
-                    outbound_arrives_at[i] = fl.getString(AM_ARRIVES_AT);
 
                     JSONObject origin = fl.getJSONObject(AM_ORIGIN);
-                    outbound_origin_airport[i] = origin.getString(AM_AIRPORT);
 
                     JSONObject destination = fl.getJSONObject(AM_DESTINATION);
-                    outbound_destination_airport[i] = destination.getString(AM_AIRPORT);
-
-                    outbound_airline[i] = fl.getString(AM_AIRLINE);
-                    outbound_flight_number[i] = fl.getString(AM_FLIGHT_NUMBER);
 
                     // Προσθήκη πτήσης στο ArrayList για outbound.
                     outFlights.add(new Flights(fl.getString(AM_DEPARTS_AT),
@@ -146,17 +115,10 @@ public final class FlightsJsonUtils {
 
                 for (int k=0; k<numberOfInboundFlights; k++) {
                     JSONObject fl = inFlightsArr.getJSONObject(k);
-                    inbound_departs_at[i] = fl.getString(AM_DEPARTS_AT);
-                    inbound_arrives_at[i] = fl.getString(AM_ARRIVES_AT);
 
-                    JSONObject origin = fl.getJSONObject(AM_ORIGIN);
-                    inbound_origin_airport[i] = origin.getString(AM_AIRPORT);
+                    JSONObject origin = fl.getJSONObject(AM_ORIGIN);;
 
                     JSONObject destination = fl.getJSONObject(AM_DESTINATION);
-                    inbound_destination_airport [i] = destination.getString(AM_AIRPORT);
-
-                    inbound_airline[i] = fl.getString(AM_AIRLINE);
-                    inbound_flight_number[i] = fl.getString(AM_FLIGHT_NUMBER);
 
                     // Προσθήκη πτήσης στο ArrayList για inbound
                     inFlights.add(new Flights(fl.getString(AM_DEPARTS_AT),
@@ -188,17 +150,19 @@ public final class FlightsJsonUtils {
         String msg = "\n\n\n\nΠληροφορίες για τις πτήσεις!\n\n Βρέθηκαν " + numberOfFlights + " πτήσεις!\n\n";
         for (int i=0; i<numberOfFlights; i++){
             msg += "Πτήση νούμερο: " + i + "\n";
-            msg += "Από " + outbound_origin_airport[i] +"\n";
-            msg += "Σε " + inbound_origin_airport[i] +"\n\n";
-            msg += "Ημερομηνία αναχώρησης " + outbound_departs_at[i] + " με άφιξη στις " + outbound_arrives_at[i] +"\n";
-            msg += "Εταιρία: " + outbound_airline[i] +"\n";
-            msg += "Κωδικός πτήσης: " + outbound_flight_number[i] +"\n";
+            msg += "Από " +  flightResults.get(i).getItineraries().get(0).getOutbound().get(0).getOrigin_airport() +"\n";
+            msg += "Σε " + flightResults.get(i).getItineraries().get(0).getInbounds().get(0).getOrigin_airport() +"\n\n";
+            msg += "Ημερομηνία αναχώρησης " + flightResults.get(i).getItineraries().get(0).getOutbound().get(0).getDeparts_at()
+                    + " με άφιξη στις " + flightResults.get(i).getItineraries().get(0).getOutbound().get(0).getArrives_at() +"\n";
+            msg += "Εταιρία: " + flightResults.get(i).getItineraries().get(0).getOutbound().get(0).getAirline_full_name() +"\n";
+            msg += "Κωδικός πτήσης: " + flightResults.get(i).getItineraries().get(0).getOutbound().get(0).getFlight_number() +"\n";
 
-            msg += "Ημερομηνία επιστροφής " + inbound_departs_at[i] + " με άφιξη στις " + inbound_arrives_at[i] +"\n";
-            msg += "Εταιρία: " + inbound_airline[i] +"\n";
-            msg += "Κωδικός πτήσης: " + inbound_flight_number[i] +"\n";
+            msg += "Ημερομηνία επιστροφής " + flightResults.get(i).getItineraries().get(0).getInbounds().get(0).getDeparts_at()
+                    + " με άφιξη στις " + flightResults.get(i).getItineraries().get(0).getInbounds().get(0).getArrives_at() +"\n";
+            msg += "Εταιρία: " + flightResults.get(i).getItineraries().get(0).getInbounds().get(0).getAirline_full_name() +"\n";
+            msg += "Κωδικός πτήσης: " + flightResults.get(i).getItineraries().get(0).getInbounds().get(0).getFlight_number() +"\n";
 
-            msg += "Συνολικό κόστος: " + price[i] + " σε νόμισμα: " + currency +"\n";
+            msg += "Συνολικό κόστος: " + flightResults.get(i).getPrice() + " σε νόμισμα: " + currency +"\n";
             msg += "***********************************\n***********************************\n***********************************\n***********************************\n";
         }
 

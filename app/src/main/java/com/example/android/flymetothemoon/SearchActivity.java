@@ -27,6 +27,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -203,16 +204,6 @@ public class SearchActivity extends AppCompatActivity {
         currency = mCurrency;
         maxResults = mMaxResults;
         max_price = mMax_price;
-
-
-        //TODO remove it
-        String msg = "";
-        msg += "Currency = " + currency + "\n";
-        msg += "Max Results = " + maxResults + "\n";
-        msg += "Max Price = "+ max_price + "\n";
-        Log.v("TAG", msg);
-
-
     }
 
     @Override
@@ -340,7 +331,7 @@ public class SearchActivity extends AppCompatActivity {
      */
     public void showResults(View view){
         /* καλέι τα dummy δεδομένα
-        Intent intent = new Intent(this,SearchResultsActivity.class);
+
         startActivity(intent);
        */
 
@@ -352,15 +343,15 @@ public class SearchActivity extends AppCompatActivity {
         intent.putExtra("is_one_way", Boolean.toString(isOneWay()));
         intent.putExtra("is_non_stop", Boolean.toString(isNonStop()));
         intent.putExtra("persons", Integer.toString(getPersons()));
-        intent.putExtra("max_price", "400"); //TODO
 
 
 
         startActivity(intent);
 
     }
+
     /**
-     * Προσθέτω listeners στα κουμπιά datepickers.
+     * Προσθέτω listeners στα κουμπιά datepickers και καθαρισμός επιλογών.
      * Περιλαμβάνει και αναχώρηση και επιστροφή.
      */
     public void addListenerOnButton(){
@@ -377,6 +368,22 @@ public class SearchActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 showDialog(DATE_ARRIVAL_DIALOG_ID);
+            }
+        });
+
+        ImageButton clearOrigin = (ImageButton) findViewById(R.id.clearOriginTextViewButton);
+        clearOrigin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                autocompleteOriginAirport.setText("");
+            }
+        });
+
+        ImageButton clearDestination = (ImageButton) findViewById(R.id.clearDestinationTextViewButton);
+        clearDestination.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                autocompleteDestinationAirport.setText("");
             }
         });
     }
@@ -537,6 +544,8 @@ public class SearchActivity extends AppCompatActivity {
     public int getPersons(){
         return persons;
     }
+
+
 
 
 }

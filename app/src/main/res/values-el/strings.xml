@@ -4,7 +4,7 @@
     <string name="arrival_date">Ημερομηνία Επιστροφής</string>
     <string name="banner" translatable="false">Οργανώστε το επόμενο σας ταξίδι τώρα!!</string>
     <string name="departure_date">Ημερομηνία Αναχώρησης</string>
-    <string name="destination">Προορισμός:</string>
+    <string name="destination">Προς:</string>
     <string name="direct_flights_only">Απευθείας πτήσεις</string>
     <string name="flight_search">Αναζήτηση πτήσης</string>
     <string name="one_way_trip">Απλή μετάβαση</string>

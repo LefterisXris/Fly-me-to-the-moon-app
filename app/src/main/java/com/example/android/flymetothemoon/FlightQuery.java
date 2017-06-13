@@ -17,8 +17,15 @@ public class FlightQuery {
     private String mMaxResults;
     private String mCurrency;
 
+    private String oneWay;
+    private String persons;
 
-    public FlightQuery(String origin, String destination, String deparrture_date, String return_date, String nonstop, String max_price, String max_results, String currency) {
+
+
+
+    public FlightQuery(String origin, String destination, String deparrture_date, String return_date, String nonstop, String max_price, String max_results,
+                       String currency, String oneWay, String persons) {
+
         mOrigin = origin;
         mDestination = destination;
         mDeparrture_date = deparrture_date;
@@ -28,6 +35,9 @@ public class FlightQuery {
         mMax_price = max_price;
         mMaxResults = max_results;
         mCurrency = currency;
+        this.oneWay = oneWay;
+        this.persons = persons;
+
     }
 
 
@@ -97,6 +107,22 @@ public class FlightQuery {
 
     public String getmNonstop() {
         return mNonstop;
+    }
+
+    public String getOneWay() {
+        return oneWay;
+    }
+
+    public void setOneWay(String oneWay) {
+        this.oneWay = oneWay;
+    }
+
+    public String getPersons() {
+        return persons;
+    }
+
+    public void setPersons(String persons) {
+        this.persons = persons;
     }
 
 }
