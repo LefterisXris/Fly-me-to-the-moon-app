@@ -27,6 +27,8 @@ import static com.example.android.flymetothemoon.R.drawable.max_price;
 
 public class ResultAdapter extends ArrayAdapter<FlightResults> {
 
+    //region Fields
+
     // logo
    // private ImageView mCompanyLogoImageView;
     private TextView mCompanyNameTextView;
@@ -49,6 +51,8 @@ public class ResultAdapter extends ArrayAdapter<FlightResults> {
 
     //price
     private TextView mTotalPriceTextView;
+
+    //endregion
 
     public ResultAdapter(Activity context, ArrayList<FlightResults> result) {
         // Here, we initialize the ArrayAdapter's internal storage for the context and the list.

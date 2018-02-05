@@ -48,6 +48,9 @@ import static com.example.android.flymetothemoon.R.array.available_airports;
 
 public class SearchActivity extends AppCompatActivity {
 
+
+    //region Fields
+
     private Button arrival_date_button;
     private TextView display_arrival_date;
 
@@ -87,6 +90,8 @@ public class SearchActivity extends AppCompatActivity {
     private String max_price;
     private String maxResults = "10";
     private String currency = "EUR";
+
+    //endregion
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -419,12 +424,16 @@ public class SearchActivity extends AppCompatActivity {
         return null;
     }
 
+    //region DatePickers
+
     private DatePickerDialog.OnDateSetListener datePickerDepartureListener
             = new DatePickerDialog.OnDateSetListener(){
         // when dialog box is closed, below method will be called.
 
         @Override
         public void onDateSet(DatePicker view, int selectedYear, int selectedMonth, int selectedDay) {
+
+            //region DatePicker Implementation
 
             year = selectedYear;
             month = selectedMonth;
@@ -482,7 +491,7 @@ public class SearchActivity extends AppCompatActivity {
 
             return_date_formated =  (new StringBuilder().append(year_formatted)
                     .append("-").append(month_formatted).append("-").append(day_formatted)).toString();
-
+        //endregion
         }
     };
 
@@ -513,6 +522,7 @@ public class SearchActivity extends AppCompatActivity {
         }
     };
 
+    //endregion
 
     public String getOrigin(){
         return autocompleteOriginAirport.getText().toString();

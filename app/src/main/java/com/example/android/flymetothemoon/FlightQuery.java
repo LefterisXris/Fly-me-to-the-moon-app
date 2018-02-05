@@ -8,6 +8,8 @@ import static com.example.android.flymetothemoon.R.string.origin;
 
 public class FlightQuery {
 
+    //region Fields
+
     private String mOrigin;
     private String mDestination;
     private String mDeparrture_date;
@@ -20,8 +22,7 @@ public class FlightQuery {
     private String oneWay;
     private String persons;
 
-
-
+    //endregion
 
     public FlightQuery(String origin, String destination, String deparrture_date, String return_date, String nonstop, String max_price, String max_results,
                        String currency, String oneWay, String persons) {
@@ -40,6 +41,8 @@ public class FlightQuery {
 
     }
 
+
+    //region Getters & Setters
 
     public String getmOrigin() {
         return mOrigin;
@@ -124,5 +127,7 @@ public class FlightQuery {
     public void setPersons(String persons) {
         this.persons = persons;
     }
+
+    //endregion
 
 }

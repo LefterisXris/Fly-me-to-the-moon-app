@@ -38,6 +38,7 @@ public final class NetworkUtils {
     &currency=EUR"
      */
 
+    //region Fields
 
     private static final String TAG = NetworkUtils.class.getSimpleName(); //gia to Log.v()
 
@@ -81,6 +82,7 @@ public final class NetworkUtils {
     final static String AIRLINES_API_KEY_PARAM = "api_key";
     final static String AIRLINES_CODE_PARAM = "code";
 
+    //endregion
 
     /* για να φτιάξω το  uri με βάση αυτά που θέλει ο χρήστης θα πρέπει αν αλλάξω την υπογραφή της. θα παίρνει ως είσοδο αυτά που θέλω. */
     public static URL buildUrl(String origin,
@@ -218,7 +220,12 @@ public final class NetworkUtils {
 
     }
 
-
+    /**
+     * Method that creates a http request and gets the response.
+     * @param url: The specific url that I want to visit.
+     * @return: The response as a String.
+     * @throws IOException
+     */
     public static  String getResponseFromHttpUrl(URL url) throws IOException {
         HttpsURLConnection urlConnection = (HttpsURLConnection) url.openConnection();
 

@@ -3,93 +3,66 @@
 
     <item
         is-multidex="false"
-        jar="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.8.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="7e92aadd0697922316d1395c1887a23aebec640a">
-        <dex dex="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-base-9.8.0_3b6833526e70e972a566f3d1f19ae38cde256ab5.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
-        <dex dex="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-24.2.1_243c9949cf2f82e47d86b2502bf218ecdd15fd97.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
-        <dex dex="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-24.2.1_ffb9fb2c18fb85dad0c946e44d2d894bfc4996cc.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jar="C:\Users\tsita\.android\build-cache\a539746817624a0b17a74fc9f1e6e923d4c5a13f\output\jars\libs\internal_impl-24.2.1.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.1"
         sha1="867dad63c33388ff8c7644b236579355036d075f">
-        <dex dex="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_70cbe0f381aa7a5b5c1ebb3e8605322176be0e44.jar" />
+        <dex dex="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_a461118682663b785b922869427d2dad49fd69cc.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-24.2.1_ef3c6074ec7c62e431e1c6a198faae58c0a1693d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
-        <dex dex="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_63b72b22d2554cc38411996edb5eccb5883f1edb.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
-        <dex dex="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-24.2.1_b20153834660207c6b1945aa6f8f1e4eca293514.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.8.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="c61641e333fa88da21758bab8cc28ee16604b05f">
-        <dex dex="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-common-9.8.0_2ea61523cc43a47a7041dfe68799712ef99ed423.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
+        jar="C:\Users\tsita\.android\build-cache\7905368e17fa65d057dd40f7e7416d42dbd5405d\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.1"
         sha1="d5c731fc64c03dfe04d51134955b483551c35849">
-        <dex dex="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-24.2.1_a8118ac7e1ef0e760ca40f9f59ab01551fdd5427.jar" />
+        <dex dex="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\pre-dexed\debug\classes_5b5a37c88c6b887d3ab23f0db40b20e3c7437eca.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
+        jar="C:\Users\tsita\.android\build-cache\df17eacf058462d11af279326a4a2fa30c4a7458\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.1"
-        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
-        <dex dex="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-24.2.1_2c427e407ac721528be1d6c30e801f4c87cae1b1.jar" />
+        sha1="7e92aadd0697922316d1395c1887a23aebec640a">
+        <dex dex="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\pre-dexed\debug\classes_fad57c5073114e298d4c47207f9f5a995412cb5f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\tsita\.android\build-cache\ef996a81d875f035390ae16266971e2033724e34\output\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_1550350c06dfdefc55d7744e1bc655373bf22947.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\tsita\.android\build-cache\5ee2bff63d11357fa90c35f46cf2e0f4c673814e\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="bf2e1838e4428616c1aa26edf43de72b5b99bf84">
+        <dex dex="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\pre-dexed\debug\classes_44aba1b2a4ad3cad37632f2d6951dedaa0412089.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\tsita\.android\build-cache\2657542b7a68c5432aac04ebc50ab9055840b3c1\output\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_b84235c91fb44279650d2a6c7d052ee210354bf4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\tsita\.android\build-cache\e80060ddddf46c299a81aae111ccb86fa9d66604\output\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_25ffc8b86d52102c3c8c8d313be782ef75fcecb9.jar" />
     </item>
     <item
         is-multidex="false"
@@ -102,84 +75,111 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.8.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="9f6d236bac26d02b410e4ee186ba517ace5ee661">
-        <dex dex="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-basement-9.8.0_2b60078128cbbc7bba358707166f6be6b25e18c1.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
-        <dex dex="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-24.2.1_9c7e424116bcf67807164cc68edc80e51db4ea80.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
-        <dex dex="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_0a2ceeadc830ed11e179da6ea5c447fd9d210449.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
-        <dex dex="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-24.2.1_3daef03333a8871bb030d3f24ec12fb711649990.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.8.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="bf2e1838e4428616c1aa26edf43de72b5b99bf84">
-        <dex dex="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-tasks-9.8.0_f26d77415f25e31bf385a6b297d70bf4c5f1dee1.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\9.8.0\jars\classes.jar"
+        jar="C:\Users\tsita\.android\build-cache\b6042b7c2ffc65ca87e5fbbb16f880de74590fe3\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.1"
         sha1="e3234cd25e23069abd48ecd2117bc0e8011bf45a">
-        <dex dex="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-appindexing-9.8.0_91ef826f8a05c728ca3b922e93ebe0716f1e5313.jar" />
+        <dex dex="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\pre-dexed\debug\classes_348967678af8230265d1ec6eb443cb9bb29094b0.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jar="C:\Users\tsita\.android\build-cache\a539746817624a0b17a74fc9f1e6e923d4c5a13f\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.1"
-        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
-        <dex dex="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_8d7b529c83e7da49e1c58023478615e2d5a8d437.jar" />
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\pre-dexed\debug\classes_f922cc7c871b0bc9def0252ad520c3aaa7f0464d.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jar="C:\Users\tsita\.android\build-cache\ef996a81d875f035390ae16266971e2033724e34\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.1"
-        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
-        <dex dex="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_01b08622ae5b955098f830dedc4e07990c2663e7.jar" />
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\pre-dexed\debug\classes_08524bd347bf9b22ee83d3f21610a7ca71ce7abc.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
+        jar="C:\Users\tsita\.android\build-cache\2657542b7a68c5432aac04ebc50ab9055840b3c1\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\pre-dexed\debug\classes_8c597edb3fa19bf0d65e7f3cfc8aa70297bc8680.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\tsita\.android\build-cache\e80060ddddf46c299a81aae111ccb86fa9d66604\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\pre-dexed\debug\classes_1a5a0908fe216562130f671fa0cfbd308de781a8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\tsita\.android\build-cache\083a3a55bb9a307eab044c107d464e2b8d2af8a1\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.1"
         sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
-        <dex dex="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-24.2.1_6c0f76d843a1b0ef86ae1ac6f0f19e2a841fc9b5.jar" />
+        <dex dex="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\pre-dexed\debug\classes_501058679fce03d515e50f7a21e6412633348880.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\tsita\.android\build-cache\75a01b2a85ee7149d7c0506bea066722144e49a0\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="c61641e333fa88da21758bab8cc28ee16604b05f">
+        <dex dex="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\pre-dexed\debug\classes_f6dc1e6e2604f4fb0d30d71e2d96eeaa34667489.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\tsita\.android\build-cache\0ca5c4bfb4432ada3e3cea642dfffb1be163faef\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\pre-dexed\debug\classes_b5eddf8585a0239259e4f4338f1a9a393f000808.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\tsita\.android\build-cache\083a3a55bb9a307eab044c107d464e2b8d2af8a1\output\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_212fd17a2f4ca7d02b0227454dc4755bff77968b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\tsita\.android\build-cache\fde51450a880d7cdc6a12a559a28c4eed22a3b03\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\pre-dexed\debug\classes_81f3174c92a04f2a62b4736fa4cb13bc59e39740.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\tsita\.android\build-cache\bfb1b7e0ee0eef32e37d1438efdaae333d530565\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\pre-dexed\debug\classes_71986a54c2d6eddfd1b91f328dea98e4be1188ff.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\tsita\.android\build-cache\a5c55e151e98948de08d747b57940375f7c2fdde\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="9f6d236bac26d02b410e4ee186ba517ace5ee661">
+        <dex dex="C:\Users\tsita\AndroidStudioProjects\Flymetothemoon\app\build\intermediates\pre-dexed\debug\classes_c88355b4196b79d9c4e4a76c96b705d57849262f.jar" />
     </item>
 
 </items>

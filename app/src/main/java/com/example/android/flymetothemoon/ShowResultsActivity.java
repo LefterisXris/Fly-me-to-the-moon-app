@@ -44,6 +44,8 @@ import static com.example.android.flymetothemoon.R.xml.prefs;
 public class ShowResultsActivity extends AppCompatActivity {
 
 
+    //region fields
+
     private static final String TAG = ShowResultsActivity.class.getSimpleName(); //gia to Log.v()
 
 
@@ -85,6 +87,7 @@ public class ShowResultsActivity extends AppCompatActivity {
     private ListView listView;
     private JsonResponseFlights response;
 
+    //endregion
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
